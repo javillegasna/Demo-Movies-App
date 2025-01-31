@@ -51,6 +51,7 @@ const Carousel = React.forwardRef<
     },
     plugins
   );
+
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
 
@@ -136,10 +137,9 @@ Carousel.displayName = "Carousel";
 
 const CarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
-    const { carouselRef, orientation } = useCarousel();
-
+    const { orientation } = useCarousel();
     return (
-      <div ref={carouselRef} className="overflow-hidden">
+      <div className="overflow-hidden">
         <div
           ref={ref}
           className={cn(

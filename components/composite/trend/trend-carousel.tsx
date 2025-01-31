@@ -20,7 +20,7 @@ interface TrendCarouselProps {
 }
 
 export const TrendCarousel: React.FC<TrendCarouselProps> = ({ title, link, items }) => {
-  const [api, setApi] = useState<CarouselApi>();
+  const [api, setApi] = useState<CarouselApi | undefined>(undefined);
   const [total, setTotal] = useState(0);
   const [current, setCurrent] = useState(0);
 
@@ -36,10 +36,12 @@ export const TrendCarousel: React.FC<TrendCarouselProps> = ({ title, link, items
   }, [api]);
 
   function nextSlide() {
+    if (!api) return;
     api?.scrollNext();
   }
 
   function previousSlide() {
+    if (!api) return;
     api?.scrollPrev();
   }
 

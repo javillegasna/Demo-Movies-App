@@ -25,7 +25,6 @@ export default async function Detail(props: DetailProps) {
   } = await tmdb.movie.detail({
     id: params.id,
   });
-
   const overview = [
     {
       title: "Release Date",
@@ -81,8 +80,7 @@ export default async function Detail(props: DetailProps) {
           </div>
         ))}
       </div>
-
-      {belongs_to_collection && <MovieCollection id={belongs_to_collection.id} />}
+      {belongs_to_collection?.id && <MovieCollection id={belongs_to_collection.id} />}
     </section>
   );
 }

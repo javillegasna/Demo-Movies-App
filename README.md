@@ -2,6 +2,12 @@
 
 This is a demo app to connect to the TMDB api.
 
+# Testing
+
+- [Manual testing Findings](https://github.com/javillegasna/Demo-Movies-App/blob/main/tests/report/Findings.md)
+- [E2E test cases](https://github.com/javillegasna/Demo-Movies-App/blob/main/tests/e2e/cypress/cases/test-cases.md)
+- [Coverage report on tested pages](https://github.com/javillegasna/Demo-Movies-App/blob/main/tests/report/coverage.md)
+
 ## Technologies used
 
 - ⚡ [Next.js](https://nextjs.org) with App Router support

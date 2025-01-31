@@ -19,7 +19,7 @@ https://movie-app-fu.vercel.app/tv/257048/seasons?s=1
 
 ![episodes card](image-2.png)
 
-## Potential scrolling on movies carousel
+## Potential scrolling base on css on movies carousel
 
 Improve usability of component reducing interactions
 ![alt text](image-3.png)

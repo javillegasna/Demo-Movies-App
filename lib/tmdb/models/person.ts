@@ -29,4 +29,5 @@ export type PersonDetails = {
   place_of_birth: string;
   popularity: number;
   profile_path: string;
+  images: {};
 };

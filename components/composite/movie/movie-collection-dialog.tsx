@@ -40,31 +40,32 @@ export const MovieCollectionDialog: React.FC<MovieCollectionDialogProps> = ({
 
         <ScrollArea className="max-h-[80dvh] md:pr-4">
           <div className="grid gap-4 md:grid-cols-2">
-            {sortByReleaseDate(parts).map((part) => (
-              <Link href={`/movie/${part.id}`} key={part.id}>
-                <MediaMiniDetail.Root className="rounded-md border">
-                  <MediaMiniDetail.Backdrop>
-                    <MediaBackdrop
-                      image={part.backdrop_path}
-                      alt={part.title}
-                      className="rounded-b-none"
-                      size="w780"
-                    />
-                  </MediaMiniDetail.Backdrop>
+            {parts &&
+              sortByReleaseDate(parts).map((part) => (
+                <Link href={`/movie/${part.id}`} key={part.id}>
+                  <MediaMiniDetail.Root className="rounded-md border">
+                    <MediaMiniDetail.Backdrop>
+                      <MediaBackdrop
+                        image={part.backdrop_path}
+                        alt={part.title}
+                        className="rounded-b-none"
+                        size="w780"
+                      />
+                    </MediaMiniDetail.Backdrop>
 
-                  <MediaMiniDetail.Hero>
-                    <MediaMiniDetail.Poster>
-                      <MediaPoster image={part.poster_path} alt={part.title} />
-                    </MediaMiniDetail.Poster>
+                    <MediaMiniDetail.Hero>
+                      <MediaMiniDetail.Poster>
+                        <MediaPoster image={part.poster_path} alt={part.title} />
+                      </MediaMiniDetail.Poster>
 
-                    <div className="space-y-1">
-                      <MediaMiniDetail.Title>{part.title}</MediaMiniDetail.Title>
-                      <MediaMiniDetail.Overview>{part.overview}</MediaMiniDetail.Overview>
-                    </div>
-                  </MediaMiniDetail.Hero>
-                </MediaMiniDetail.Root>
-              </Link>
-            ))}
+                      <div className="space-y-1">
+                        <MediaMiniDetail.Title>{part.title}</MediaMiniDetail.Title>
+                        <MediaMiniDetail.Overview>{part.overview}</MediaMiniDetail.Overview>
+                      </div>
+                    </MediaMiniDetail.Hero>
+                  </MediaMiniDetail.Root>
+                </Link>
+              ))}
           </div>
         </ScrollArea>
       </DialogContent>
